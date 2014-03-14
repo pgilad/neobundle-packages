@@ -1,0 +1,38 @@
+{
+    "name": "ctrlp",
+    "lazy": true,
+    "autoload": {
+        "commands": ["CtrlP", "CtrlPBuffer", "CtrlPMRU", "CtrlPMixed"]
+    }
+    "version": "",
+    "description": "",
+    "license": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kien/ctrlp.vim"
+    },
+    "homepage": "https://github.com/kien/ctrlp.vim",
+    "bugs": "https://github.com/kien/ctrlp.vim/issues",
+    "author": {
+        "name": "",
+        "email": ""
+    },
+    "engines": {
+        "vim": ""
+    },
+    "keywords": [
+        "vim",
+        "search"
+    ]
+}
+
+
+
+
+
+
+
+}
+"kien/ctrlp.vim", {
+    'lazy': 1,
+}
