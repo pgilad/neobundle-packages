@@ -3,7 +3,7 @@
 
 ## Goal
 
-The goal of this project is to gather a list of jsons for installable packages in NeoBundle.
+The goal of this project is to gather a list of jsons for installable packages in [NeoBundle](https://github.com/Shougo/neobundle.vim)
 
 **Shougou** has created a [neobundle-vim-recipes](https://github.com/Shougo/neobundle-vim-recipes) repository
 which unifies NeoBundle recipes, but they are in a vim-format, and I want it to be JSON.
