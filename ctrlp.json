@@ -25,14 +25,3 @@
         "search"
     ]
 }
-
-
-
-
-
-
-
-}
-"kien/ctrlp.vim", {
-    'lazy': 1,
-}
