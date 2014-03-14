@@ -3,7 +3,7 @@
     "lazy": true,
     "autoload": {
         "commands": ["CtrlP", "CtrlPBuffer", "CtrlPMRU", "CtrlPMixed"]
-    }
+    },
     "version": "",
     "description": "",
     "license": "",
