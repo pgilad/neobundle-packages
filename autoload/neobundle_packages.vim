@@ -7,7 +7,14 @@ set cpo&vim
 
 let s:pluginDir = 'packages/'
 
-function! s:ParseJsonFile(jsonFile)
+if !exists(":NeoBundle")
+    echom "Please load NeoBundle before.."
+    finish
+endif
+
+python import json,vim
+
+function! s:parse_json_file(jsonFile)
     let l:jsonFile = fnameescape(expand(a:jsonFile))
     if filereadable(l:jsonFile)
         let l:json_string = join(readfile(l:jsonFile, "b"), "")
@@ -15,10 +22,10 @@ function! s:ParseJsonFile(jsonFile)
     endif
 endfunction
 
-function! s:ParseBundle(bundle_path, bundle)
+function! neobundle_packages#parse_bundle(bundle_path, bundle)
     "TODO improve this and possibly get rid of bundles path
     let jsonFile = a:bundle_path . 'neobundle-packages/' . s:pluginDir .  a:bundle . '.json'
-    let bundle = s:ParseJsonFile(l:jsonFile)
+    let bundle = s:parse_json_file(l:jsonFile)
     if !exists("bundle.repository")
         echom "Failed to load bundle ". a:bundle
         return
@@ -28,14 +35,5 @@ function! s:ParseBundle(bundle_path, bundle)
     execute 'NeoBundle ' . compiledBundle
 endfunction
 
-if !exists(":NeoBundle")
-    echom "Please load NeoBundle before.."
-    finish
-endif
-
-if !exists(":NeoBundlePacakge")
-    python import json,vim
-    command! -nargs=2 NeoBundlePackage call s:ParseBundle(<args>)
-endif
-
 let &cpo = s:save_cpo
+unlet s:save_cpo
