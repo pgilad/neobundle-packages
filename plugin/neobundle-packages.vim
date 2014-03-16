@@ -34,7 +34,7 @@ if !exists(":NeoBundle")
 endif
 
 if !exists(":NeoBundlePacakge")
-    python json,vim
+    python import json,vim
     command! -nargs=2 NeoBundlePackage call s:ParseBundle(<args>)
 endif
 
