@@ -23,6 +23,16 @@ My main focus in creating JSON NeoBundle recipes is 2 things:
 
 ## Usages
 
+#### Loading a package from a known json package:
+
+Suppose that there is a `ctrlp.json` file that lies in the `packages/` directory. You load it via:
+```vim
+let g:bundle_path = "~/vimfiles/bundle/"
+call neobundle_packages#parse_bundle(g:bundle_path, 'ctrlp')
+```
+
+And that will load the `ctrlp.vim` json package along side it's lazy loading instructions.
+
 ## Future
 
 - A growing list of supported plugins
