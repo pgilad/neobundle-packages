@@ -21,6 +21,11 @@ My main focus in creating JSON NeoBundle recipes is 2 things:
 
 *(I have 76 packages and that number is growing)*
 
+## Immediate Goals
+
+- Get bundle path from NeoBundle
+- Add more packages to test performance
+
 ## Usages
 
 #### Loading a package from a known json package:
