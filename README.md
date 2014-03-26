@@ -21,10 +21,41 @@ My main focus in creating JSON NeoBundle recipes is 2 things:
 
 *(I have 76 packages and that number is growing)*
 
+**Notice: even though this plugin works, please be prepared for major API changes as this develops**
+
 ## Immediate Goals
 
 - Get bundle path from NeoBundle
 - Add more packages to test performance
+
+## Sample ctrlp.json
+
+```json
+{
+    "name": "ctrlp",
+    "lazy": true,
+    "autoload": {
+        "commands": ["CtrlP", "CtrlPBuffer", "CtrlPMRU", "CtrlPMixed"]
+    },
+    "version": "",
+    "description": "",
+    "license": "",
+    "repository": "kien/ctrlp.vim",
+    "homepage": "https://github.com/kien/ctrlp.vim",
+    "bugs": "https://github.com/kien/ctrlp.vim/issues",
+    "author": {
+        "name": "",
+        "email": ""
+    },
+    "engines": {
+        "vim": ""
+    },
+    "keywords": [
+        "vim",
+        "search"
+    ]
+}
+```
 
 ## Usages
 
