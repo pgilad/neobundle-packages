@@ -19,7 +19,7 @@ My main focus in creating JSON NeoBundle recipes is 2 things:
 1. An easy-parseable and modern format.
 2. Utilizing the **lazy** loading feature in NeoBundle, which is crucial when you have many installed plugins.
 
-*(I have 68 packages and that number is growing)*
+*(I have 76 packages and that number is growing)*
 
 ## Usages
 
