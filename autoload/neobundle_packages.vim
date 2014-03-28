@@ -24,11 +24,11 @@ endfunction
 
 function! neobundle_packages#parse_bundle(bundle)
     if !exists('*neobundle#get_neobundle_dir')
-        echom "Cannot detect Neobundle Dir"
+        echom "Cannot detect Neobundle dir"
         return 0
     endif
 
-    let jsonFile = neobundle#get_neobundle_dir() . s:pluginDir .  a:bundle . '.json'
+    let jsonFile = neobundle#get_neobundle_dir() . s:pluginDir . a:bundle . '.json'
     let bundle = s:parse_json_file(l:jsonFile)
     if !exists("bundle.repository")
         echom "Failed to load bundle ". a:bundle
