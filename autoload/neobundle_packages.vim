@@ -5,7 +5,7 @@ endif
 let s:save_cpo=&cpo
 set cpo&vim
 
-let s:pluginDir = 'packages/'
+let s:pluginDir = '/neobundle-packages/packages/'
 
 if !exists(":NeoBundle")
     echom "Please load NeoBundle before.."
@@ -22,9 +22,13 @@ function! s:parse_json_file(jsonFile)
     endif
 endfunction
 
-function! neobundle_packages#parse_bundle(bundle_path, bundle)
-    "TODO improve this and possibly get rid of bundles path
-    let jsonFile = a:bundle_path . 'neobundle-packages/' . s:pluginDir .  a:bundle . '.json'
+function! neobundle_packages#parse_bundle(bundle)
+    if !exists('*neobundle#get_neobundle_dir')
+        echom "Cannot detect Neobundle Dir"
+        return 0
+    endif
+
+    let jsonFile = neobundle#get_neobundle_dir() . s:pluginDir .  a:bundle . '.json'
     let bundle = s:parse_json_file(l:jsonFile)
     if !exists("bundle.repository")
         echom "Failed to load bundle ". a:bundle
