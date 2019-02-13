@@ -73,3 +73,7 @@ And that will load the `ctrlp.vim` json package along side it's lazy loading ins
 - A growing list of supported plugins
 - A growing conventions that a plugin list database should be created (vim.org is kinda 1999)
 - Support on the side of developers exporting their plugins using `(Plug)` or `global commands`.
+
+## License
+
+MIT © [Gilad Peleg](https://www.giladpeleg.com)
